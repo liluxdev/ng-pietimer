@@ -6,5 +6,12 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/ng-pietimer/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ng-pietimer/tsconfig.spec.json"
+    }
+]
 }
