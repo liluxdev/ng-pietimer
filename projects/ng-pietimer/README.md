@@ -1,24 +1,27 @@
 # NgPietimer
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.14.
+Angular pie timer for visual countdowns
 
-## Code scaffolding
+# Install
 
-Run `ng generate component component-name --project ng-pietimer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-pietimer`.
-> Note: Don't forget to add `--project ng-pietimer` or else it will be added to the default project in your `angular.json` file. 
+      npm i ng-pietimer --save
+      
+      import { NgPietimerModule } from 'ng-pietimer';
+      
+      @NgModule({
+        imports:      [ ... NgPietimerModule ],
 
-## Build
+# Usage
 
-Run `ng build ng-pietimer` to build the project. The build artifacts will be stored in the `dist/` directory.
+      <ng-pietimer [size]="10" [resetKey]="uniqueKey" [durationMs]="timeInSeconds*1000" ></ng-pietimer>
+      
+      
+# Multiple instance
 
-## Publishing
+Is possible to instanciate multiple instances of the countdown, but you have to avoid to have them in a single component (simply encapsulate them into another component like in the demo)
+     
 
-After building your library with `ng build ng-pietimer`, go to the dist folder `cd dist/ng-pietimer` and run `npm publish`.
+# Demo
+  
+https://stackblitz.com/edit/angular-9-starter-fbwfbq?file=src/app/app.component.html
 
-## Running unit tests
-
-Run `ng test ng-pietimer` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
