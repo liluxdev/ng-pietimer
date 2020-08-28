@@ -10,7 +10,7 @@ const π = Math.PI;
 })
 export class NgPietimerComponent implements OnInit, AfterViewInit, OnChanges {
 
-  size = 10;
+  @Input() size = 10;
   α = 0;
   @Input() durationMs = 4000;
   remaningTimeMs = this.durationMs;
@@ -56,7 +56,7 @@ export class NgPietimerComponent implements OnInit, AfterViewInit, OnChanges {
     this.remaningTimeMs -= elapsed;
     // elapsed: duration = x : 360
     const degreeIncrement = elapsed * 360 / this.durationMs;
-    console.log(elapsed, degreeIncrement);
+    //console.log(elapsed, degreeIncrement);
     this.α += degreeIncrement;
     //this.cc += degreeIncrement;
     this.α %= 360;
